@@ -56,15 +56,6 @@
                         <param name='filter' value='publish=yes'/>
                     </object>
                 </div>
-                <script type='text/javascript'>
-                    var divElement = document.getElementById('viz1740865294027');
-                    var vizElement = divElement.getElementsByTagName('object')[0];
-                    vizElement.style.width = '100%'; // Always fit the container
-                    vizElement.style.height = (divElement.offsetWidth * 0.60) + 'px'; // Responsive height based on width
-                    var scriptElement = document.createElement('script');
-                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                </script>
             </div>
         </div>
         <div class="row justify-content-center pt-3">
@@ -92,15 +83,6 @@
                         <param name='filter' value='publish=yes'/>
                     </object>
                 </div>
-                <script type='text/javascript'>
-                    var divElement = document.getElementById('viz1740868661842');
-                    var vizElement = divElement.getElementsByTagName('object')[0];
-                    vizElement.style.width = '100%'; // Always fit the container
-                    vizElement.style.height = (divElement.offsetWidth * 0.60) + 'px'; // Responsive height based on width
-                    var scriptElement = document.createElement('script');
-                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                </script>
             </div>
         </div>
         <div class="row justify-content-center pt-3">
@@ -128,16 +110,6 @@
                         <param name='filter' value='publish=yes'/>
                     </object>
                 </div>
-                <script type='text/javascript'>
-                    var divElement = document.getElementById('viz1740868251070');
-                    var vizElement = divElement.getElementsByTagName('object')[0];
-                    var vizElement = divElement.getElementsByTagName('object')[0];
-                    vizElement.style.width = '100%'; // Always fit the container
-                    vizElement.style.height = (divElement.offsetWidth * 0.60) + 'px'; // Responsive height based on width
-                    var scriptElement = document.createElement('script');
-                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                </script>
             </div>
         </div>
     </div>
@@ -158,15 +130,16 @@
         var divElement = document.getElementById(id);
         var vizElement = divElement.getElementsByTagName('object')[0];
         vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        vizElement.style.height = (divElement.offsetWidth * 0.60) + 'px'; // Consistent height ratio
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-        loadTableauViz('viz1');
-        loadTableauViz('viz2');
+        loadTableauViz('viz1740865294027'); // First graph
+        loadTableauViz('viz1740868661842'); // Second graph
+        loadTableauViz('viz1740868251070'); // Third graph
     });
 </script>
 
