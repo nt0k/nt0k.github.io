@@ -33,7 +33,7 @@
     <div class="container mt-3">
         <div class="row justify-content-center">
             <!-- First Graph -->
-            <div class="col-lg-12" style="max-width: 1200px; margin: 0 auto;">
+            <div class="col-12 col-lg-12" style="max-width: 1200px; margin: 0 auto;">
                 <div class='tableauPlaceholder' id='viz1740865294027' style='position: relative'>
                     <noscript><a href='#'><img alt='Dashboard 1 '
                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;Majors1_17408652671080&#47;Dashboard1&#47;1_rss.png'
@@ -60,7 +60,7 @@
         </div>
         <div class="row justify-content-center pt-3">
             <!-- Second Graph -->
-            <div class="col-lg-12" style="max-width: 1200px; margin: 0 auto;">
+            <div class="col-12 col-lg-12" style="max-width: 1200px; margin: 0 auto;">
                 <div class='tableauPlaceholder' id='viz1740868661842' style='position: relative'>
                     <noscript><a href='#'><img alt='Dashboard 2 '
                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;Minors_17408686447120&#47;Dashboard2&#47;1_rss.png'
@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="row justify-content-center pt-3">
-            <div class="col-lg-12" style="max-width: 1200px; margin: 0 auto;">
+            <div class="col-12 col-lg-12" style="max-width: 1200px; margin: 0 auto;">
                 <!-- Third Graph -->
                 <div class='tableauPlaceholder' id='viz1740868251070' style='position: relative'>
                     <noscript><a href='#'><img alt='Dashboard 3 '
@@ -130,7 +130,11 @@
         var divElement = document.getElementById(id);
         var vizElement = divElement.getElementsByTagName('object')[0];
         vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.60) + 'px'; // Consistent height ratio
+
+        // Calculate height with a minimum to prevent squashing
+        var calculatedHeight = divElement.offsetWidth * 0.60;
+        vizElement.style.height = Math.max(calculatedHeight, 500) + 'px'; // Minimum height of 400px
+
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
