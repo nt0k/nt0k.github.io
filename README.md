@@ -1,2 +1,2 @@
-# My-Website
-This is my repository for my personal website
+# Personal Website
+Check out my senior project at nkirk.net!
