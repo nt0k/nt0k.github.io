@@ -91,6 +91,33 @@
   }
 }
 
+/* For the core value icons */
+.core-value-icon {
+    width: 100px; /* Default size for small screens */
+    height: auto;
+    /* You can set a max-width to prevent them from becoming too large on desktop */
+    max-width: 150px; /* Example max size on larger screens */
+}
+
+/* For the core value text paragraphs */
+.core-value-text {
+    max-width: 90%; /* Allow text to take up more width on small screens */
+    font-size: 0.9em; /* Slightly smaller text on mobile */
+    line-height: 1.4; /* Adjust line height for readability */
+}
+
+/* Media query for medium screens and up */
+@media (min-width: 768px) {
+    .core-value-icon {
+        width: 150px; /* Revert to original size on desktop */
+    }
+
+    .core-value-text {
+        max-width: 300px; /* Original max-width for desktop */
+        font-size: 1em; /* Revert to original text size */
+    }
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
